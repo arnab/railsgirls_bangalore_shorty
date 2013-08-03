@@ -1,6 +1,7 @@
 class ShortUrlsController < ApplicationController
   def create
-    raise params.inspect
+    ShortUrl.create(url: params[:url])
+    redirect_to root_url
   end
 
   def new
