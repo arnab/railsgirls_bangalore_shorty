@@ -9,5 +9,7 @@ class ShortUrlsController < ApplicationController
   end
 
   def show
+    short_url = ShortUrl.find_by_short_code(params[:short_code])
+    redirect_to short_url.url
   end
 end

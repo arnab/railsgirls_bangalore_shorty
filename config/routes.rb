@@ -1,7 +1,7 @@
 Shorty::Application.routes.draw do
   post "short_urls/create"
   get "short_urls/new"
-  get "short_urls/show"
+  get ':short_code' => 'short_urls#show'
 
   root 'short_urls#new'
 
