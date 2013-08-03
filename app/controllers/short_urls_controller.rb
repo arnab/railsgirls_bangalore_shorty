@@ -1,5 +1,6 @@
 class ShortUrlsController < ApplicationController
   def create
+    raise params.inspect
   end
 
   def new

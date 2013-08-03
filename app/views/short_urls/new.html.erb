@@ -1,2 +1,9 @@
-<h1>ShortUrls#new</h1>
-<p>Find me in app/views/short_urls/new.html.erb</p>
+<h1>Create a short URL</h1>
+
+<%= form_tag short_urls_create_path do %>
+  <%= label_tag :url, 'URL to shorten' %>
+  <%= text_field_tag :url %>
+  <br>
+
+  <%= submit_tag 'Save' %>
+<% end %>

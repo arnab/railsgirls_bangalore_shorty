@@ -1,7 +1,10 @@
 Shorty::Application.routes.draw do
-  get "short_urls/create"
+  post "short_urls/create"
   get "short_urls/new"
   get "short_urls/show"
+
+  root 'short_urls#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -42,7 +45,7 @@ Shorty::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
