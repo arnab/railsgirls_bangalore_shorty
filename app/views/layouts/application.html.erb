@@ -21,6 +21,12 @@
 </div>
 
 <div class='container'>
+  <% if flash[:notice] -%>
+    <div class="alert alert-success">
+      <%=h flash[:notice] %>
+    </div>
+  <% end -%>
+
   <%= yield %>
 </div>
 
